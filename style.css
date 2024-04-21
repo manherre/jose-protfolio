@@ -1,0 +1,464 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+:root {
+    --dark-color:#2d2c2c;
+    --purple-solid:#358a4f;
+    --purple-transparent: rgba(53,18,79, .7);
+    --purple-transparent-alt: rgba(53, 18, 79, .5);
+    --purple-light: #8f58fb;
+    --yellow-solid: #fa9e2c;
+    --gradient-color: linear-gradient(to right, var(--yellow-solid),var(--purple-light));
+    --gradient-color-alt: linear-gradient(to right, var(--purple-light), var(--yellow-solid));
+    --h2-span:#b42525;
+    
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    background-color: #72b0e2;
+    border-bottom: 3px solid #b42525;
+    transition: 0.5s; /* time of transition when scroll */
+}
+/* Sticky header and ckange when move */
+header.sticky {
+    background: #fff;
+    padding: 20px 100px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    
+
+}
+header .logo {
+    color: #fff;
+    font-size: 24px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+/* Logo and header sticky when scroll */
+header.sticky .logo {
+  color: #111;  
+}
+header.sticky ul li a {
+    color: #111;
+}
+header.sticky ul li a:hover {
+    background:  #2196f3;
+    color: #f1f1f1;
+    padding: 10px 10px;
+    border-radius: 3px;
+}
+
+section {
+    padding: 100px;
+}
+header ul {
+    position: relative;
+    display: flex;
+}
+header ul li {
+    position: relative;
+    list-style: none;
+}
+header ul li a {
+    position: relative;
+    display: inline-block;
+    margin: 0 15px;
+    color: #fff;
+    text-decoration: none;
+}
+.banner {
+    top: 82px;
+    position: relative;
+    min-height: 100vh;
+    background-image: url(./img/Background-Free\ hand\ design.jpg);
+    background-size: cover;
+    /*background-position: right;
+    display: right;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;*/
+    z-index: -1000;
+    height: 95vh;
+    width: 100%;
+    background-image: no-repeat;
+}
+.banner h2 {
+    font-size: 3em;
+    color: #063b67;
+    line-height: 1.5em;
+}
+.banner h2 span {
+    font-size: 1.5em;
+    font-weight: 700;
+}
+.banner h3 {
+    font-size: 2em;
+    color: #b42525;
+   font-weight: 800;
+}
+/*.banner .btn {
+    background: #2196f3;
+    margin-top: 500px;
+}*/
+.about .btn {
+    position: relative;
+    background: #2196f3;
+    display: inline-block;
+    color: #fff;
+    margin-top: 20px;
+    padding: 10px 30px;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-weight: 500;
+    cursor: pointer;
+    /*left: 50%;*/
+}
+.btn:hover {
+    background: #b42525;
+    color: #fff;
+}
+.heading {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #111;
+}
+/* Position of text and pict side by side */
+/* section about */
+.content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.about .contentBx h3 {
+    font-size: 24px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+.about h2 {
+    font-size: 2em;
+    font-weight: 600;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+.about span {
+    color: #b42525;
+}
+.w50 {
+    min-width: 50%;
+    margin-top: 20px;
+}
+img {
+    max-width: 100%;
+}
+/* ****** SERVICES ***** */
+.services {
+    background: #111;
+}
+.heading.white {
+    color: #fff;
+}
+/* Services boxes displayed grid */
+.services .content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ 
+.services .content .servicesBx {
+    padding: 40px 20px;
+    background: #222;
+    color: #fff;
+    max-width: 340px;
+    margin: 20px;
+    text-align: center;
+    transition: 0.5s;
+}
+/* Boxes change when hover it */
+.services .content .servicesBx:hover {
+   background: #2196f3;
+}
+.services .content .servicesBx img {
+    filter: invert(1);
+   /* -webkit-filter: bluer(10px);*/
+}
+/* ****** WORK ***** */
+.work .work_content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    /*display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+    grid-gap: 2.5rem; */
+    
+} 
+.work .btn {
+    position: relative;
+    background: #2196f3;
+    display: inline-block;
+    color: #fff;
+    margin-top: 20px;
+    padding: 10px 10px;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.btn:hover {
+    background: #b42525;
+    color: #fff;
+}
+.work .work_content .workBx {
+    width: 50%;
+    padding: 20px;
+}
+.work .work_content .workBx img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    /*-webkit-filter: blur(1px);*/ /* is too blur*/
+    filter: opacity(30%);
+    transition: 0.3s;
+}
+.work .work_content .workBx img:hover {
+    filter: none;
+    transition-duration: 0.5s;
+ 
+}
+/* ****** TESTEMONIAL ***** */
+.testimonial {
+    background: #f7f7f7;
+}
+.testimonial .content .testimonialBx {
+   margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /*grid-template-rows: 2 (1fr);*/
+    /*display: grid;*/
+    max-width: cal(50%  40px);
+    padding: 60px 40px;
+    margin: 20px;/* division betwen top and bottom box*/
+    background: #2196f3;
+    border-radius: 10px;
+    box-shadow: 0 5px 35px rgba(0,0,0,0.08);
+}
+.testimonial .testimonial_titleh1 span p{
+    font-size: 20px;
+    color: #0000;
+    align-items: center;
+    margin-left: 50%;
+}
+.testemonial_title p {
+    color: #3f3637;
+    margin-left: 30%;
+}
+
+.testimonial span {
+  color: var(--h2-span);
+  margin-left: 50%;
+}
+.testimonial .content .testimonialBx {
+   /* color: #fff;*/
+    font-style: italic;
+    font-size: 16px;
+    font-weight: 300;
+    position: relative;
+}
+.testemonial_inf {
+    background: #72b0e2;
+    border-radius: 5px;
+    border: 1px solid #b4525b;
+    margin-left: -20%;
+    min-width: 80%;
+    padding: 20px 20px;
+    margin-top: 30px;
+}
+.testemonial_inf p {
+    margin-bottom: 20px;
+   
+ }
+.testemonial_inf span {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+.testimonialBx img {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    margin-top: -80px;
+    margin-left: 25%;
+    /*margin-bottom: 20px;*/
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid #72b0e2;
+
+}
+.testemonial_inf h3 span{
+    margin-top: 40px;
+    
+    /*text-align: end; /* text at botom end */
+    color: #fff;
+    font-weight: 600;
+    line-height: 1em;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+/* ****** CONTACT ***** */
+.contact {
+    background: #111;
+}
+.formBx {
+   min-width: 60%;
+}
+.formBx form {
+    display: flex;
+    flex-direction: column;
+}
+.formBx form h3,
+.contactInf h3 {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.formBx form input,
+.formBx form textarea {
+    margin-bottom: 20px;
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background: #222;
+    color: #fff;
+}
+.formBx form textarea {
+    min-height: 200px;
+    background: #f7f7f7;
+    color: #222;
+}
+.formBx form input::placeholder,
+.formBx form textarea::placeholder {
+    color: #999;
+}
+.formBx form input[type="submit"]{
+    max-width: 100px;
+    background: #2196f3;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.contact .heading {
+    color: #f7f7f7;
+}
+.contactInf {
+    min-width: 40%;
+}
+.contactInfoBx {
+    position: relative;
+}
+.contactInfoBx .box {
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+.contactInfoBx .box .icon {
+    min-width: 40px;
+    padding-top: 4px;
+    color: #fff;
+    display: flex;
+    justify-content: ceneter;
+    align-items: center;
+    font-size: 24px;
+}
+.contactInfoBx .box .text {
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color: #fff;
+    flex-direction: column;
+    font-weight: 300;
+}
+.contactInfoBx .box .text h3 {
+    font-weight: 500;
+    color: #2196f3;
+    margin-bottom: bottom;
+}
+/* Responsive */
+@media (max-width:991px) {
+   header,
+    header.sticky {
+        padding: 20px 100px;
+        z-index: 1000;
+   }
+    section {
+       padding: 100px 50px;
+   }
+   .banner {
+       padding: 150px 50px 100px;
+   }
+   .banner h2 {
+       font-size: 1.5em;
+   }
+   .banner h3 {
+    font-size: 1.5em;  
+   }
+   .btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+   }
+   .heading h2 {
+     font-size: 24px;
+   }
+   .contentBx h3 {
+       font-size: 24px;
+       margin-bottom: 10px;
+    }
+    .contentAbout {
+        /*flex-direction: column;*/
+        display: flex;
+        justify-content: space-between;
+    }
+    .w50 {
+        margin-bottom: 20px;
+    }
+    .work .work_content .workBx {
+        width: 100%;
+        padding: 10px;
+    }
+    .testimonial .content .testimonialBx {
+        max-width: cal(100% - 20px);
+        padding: 40px 20px;
+        margin: 10px;
+        background: #2196f3; 
+    }
+    .testimonial .content .testimonialBx h3 {
+        margin-top: 20px;
+    }
+    .contactInf {
+       margin: 20px;
+    }
+}
